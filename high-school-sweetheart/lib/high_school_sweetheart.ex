@@ -10,7 +10,7 @@ defmodule HighSchoolSweetheart do
   def initials(full_name) do
     full_name
     |> String.split(" ")
-    |> Enum.map(fn s -> initial(s) end)
+    |> Enum.map(&initial/1)
     |> Enum.join(" ")
   end
 
